@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Navigation Menu</title>
+    <link rel="stylesheet" type="text/css" href="task1.css">
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">Blogs</a>
+    </div>
+    <div class="container">
+        <h1>Welcome to our website</h1>
+        <p>This website is about blogs that includes eductional,food etc.</p>
+        
+    </div>
+
+    <div style="height: 2000px;"></div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop >0 || document.documentElement.scrollTop >0) {
+    document.getElementById("navbar").style.backgroundColor = "grey";
+  } else {
+    document.getElementById("navbar").style.backgroundColor = "black";
+  }
+}
+
+    </script>
+</body>
+</html>
+
+//css code here:
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.5s;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: grey;
+    color: black;
+}
+
+.active {
+    background-color: grey;
+}
+.container{
+    font color: black;
+    font-size: 30px;
+}
